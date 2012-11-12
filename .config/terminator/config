@@ -1,0 +1,23 @@
+[global_config]
+  geometry_hinting = False
+[keybindings]
+[profiles]
+  [[default]]
+    use_system_font = False
+    background_darkness = 0.87
+    scrollback_lines = 2202
+    background_type = transparent
+    scrollbar_position = hidden
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    font = Monospace 9
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
