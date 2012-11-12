@@ -1,0 +1,7 @@
+[user]
+	name = Afonso R. Costa Jr.
+	email = arabelo@gmail.com
+[color]
+	ui = always
+[core]
+	editor = vim
