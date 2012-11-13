@@ -1,0 +1,3 @@
+[submodule "magic-dot-files"]
+	path = magic-dot-files
+	url = https://github.com/magic-dot-files/magic-dot-files.git
