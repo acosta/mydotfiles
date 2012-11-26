@@ -2,6 +2,19 @@
 	name = Afonso R. Costa Jr.
 	email = arabelo@gmail.com
 [color]
-	ui = always
+	branch = auto
+	diff = auto
+	status = auto
+[color "status"]
+	untracked = yellow
+[color "diff"]
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [core]
 	editor = vim
+[alias]
+	amend = commit --amend
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate
+	lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --numstat
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
