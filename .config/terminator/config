@@ -10,7 +10,7 @@
     scrollbar_position = hidden
     foreground_color = "#ffffff"
     show_titlebar = False
-    font = Monospace 9
+    font = Monospace 10
     scrollback_infinite = True
 [layouts]
   [[default]]
