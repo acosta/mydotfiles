@@ -255,7 +255,7 @@
 		autocmd BufNewFile,BufRead *.pro,*.pri  set filetype=qmake
 		autocmd BufNewFile,BufRead *.qml,*.qmlproject set filetype=qml
 		autocmd BufNewFile,BufRead *.edc set filetype=edje
-		autocmd BufNewFile,BufRead *.txt set filetype=txt
+		"autocmd BufNewFile,BufRead *.txt set filetype=txt
 	endif
 " }
 
