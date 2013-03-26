@@ -6,6 +6,9 @@ export LSCOLORS=GxFxBxDxCxegedabagaced
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+#Define default editor
+export EDITOR=/usr/bin/vim
+
 # define colors
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
