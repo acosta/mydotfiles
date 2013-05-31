@@ -9,6 +9,13 @@ export LANG=en_US.UTF-8
 #Define default editor
 export EDITOR=/usr/bin/vim
 
+#Grep options
+alias grep='grep --color=auto'
+export GREP_OPTIONS="-I --exclude-dir=.svn --exclude-dir=.cache --exclude-dir=moc"
+
+#Use mvim instead of vim
+alias vim='mvim -v'
+
 # define colors
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
