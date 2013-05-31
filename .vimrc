@@ -15,13 +15,23 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
-" My Bundles
-NeoBundle 'Lokaltog/powerline'
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" Build repos.
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
-filetype plugin indent on
+NeoBundle 'Lokaltog/vim-powerline'
+
+NeoBundle 'sessionman.vim'
 
 NeoBundleCheck
+
+filetype plugin indent on
 
 syntax on                          " Turn on syntax highlighting
 
