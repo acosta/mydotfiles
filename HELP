@@ -3,12 +3,6 @@ Add a new git submodule
 git submodule add <REPO_URL>
 git submodule foreach git pull --rebase
 
-Update the magic-dot-files repo
-===============================
-Just for the first time: git submodule update --init
-git submodule foreach git checkout master
-git submodule foreach git pull --rebase
-
 Remove .git files from .vim
 ===========================
 find .vim -name .git | xargs rm -r
