@@ -26,6 +26,9 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'sessionman.vim'
 
