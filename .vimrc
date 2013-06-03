@@ -25,12 +25,12 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 
+NeoBundle 'xolox/vim-session', {
+      \ 'depends' : ['xolox/vim-misc', ]}
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
-
-NeoBundle 'sessionman.vim'
 
 NeoBundleCheck
 
