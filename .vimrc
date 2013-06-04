@@ -145,3 +145,6 @@ match OverLength '\%81v.*'
 "Highlight whitespaces
 highlight WhitespaceEOL ctermbg=red ctermfg=white guibg=red guifg=white
 match WhitespaceEOL /\s\+$/
+
+"Vim-session
+let g:session_autosave = 'no'
