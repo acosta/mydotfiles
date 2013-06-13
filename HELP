@@ -6,3 +6,15 @@ git submodule foreach git pull --rebase
 Remove .git files from .vim
 ===========================
 find .vim -name .git | xargs rm -r
+
+Installing NeoBundle
+====================
+mkdir -p ~/.vim/bundle
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+vim +NeoBundleInstall +q
+
+Installing Powerline Fonts
+==========================
+git clone https://github.com/Lokaltog/powerline-fonts.git
+Copy the respective fonts to ~/.fonts
+fc-cache -vf ~/.fonts
