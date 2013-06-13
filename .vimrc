@@ -52,7 +52,7 @@ if has("gui_running")
   " no menu bar
   set guioptions-=m
   set guifont=Menlo\ Regular\ for\ Powerline:h12
-  set fuoptions=maxvert,maxhorz
+  "set fuoptions=maxvert,maxhorz
   "au GUIEnter * set fullscreen
   set mousemodel=popup             " Enable a popup menu on right click in GUI
 endif
