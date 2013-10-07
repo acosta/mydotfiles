@@ -31,6 +31,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundleCheck
 
@@ -82,7 +83,7 @@ set mouse=a                 " Enable mouse usage (all modes) in terminals
 set number                   " Show line numbering
 set numberwidth=1            " Use 1 col + 1 space for numbers
 set guitablabel=%N/\ &t\ %M  " Tab labels show filename without path(tail)
-set ff=unix
+set ffs=unix,dos
 set encoding=utf-8
 set backspace=2              " Backspace over anything!
 set formatoptions-=tc        " I can format for myself
@@ -155,3 +156,16 @@ if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
     set term=xterm-256color
     set t_Co=256 " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 endif
+
+"Abbreviations
+ab rev Reviewed-by:
+
+"YouCompleteMe
+nnoremap y :YcmForceCompileAndDiagnostics
+nnoremap pg :YcmCompleter GoToDefinitionElseDeclaration
+nnoremap pd :YcmCompleter GoToDefinition
+nnoremap pc :YcmCompleter GoToDeclaration
+
+"Hightlight autocompletion window - modifying colors
+highlight Pmenu ctermbg=DarkGrey ctermfg=LightGrey
+highlight PmenuSel ctermbg=DarkBlue ctermfg=White
