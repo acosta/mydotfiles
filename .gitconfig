@@ -13,6 +13,7 @@
 	new = green bold
 [core]
 	editor = vim
+	deltaBaseCacheLimit = 1G
 [alias]
 	amend = commit --amend
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate
