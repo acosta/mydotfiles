@@ -150,16 +150,6 @@ match WhitespaceEOL /\s\+$/
 "Vim-session
 let g:session_autosave = 'no'
 
-let s:uname = system("uname")
-if s:uname != "Darwin\n"
-  "Vim-powerline
-  let g:Powerline_symbols='fancy'
-  if match($TERM, "screen*") != -1 || match($TERM, "xterm*") != -1
-      set term=xterm-256color
-      set t_Co=256 " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-  endif
-endif
-
 "Abbreviations
 ab rev Reviewed-by:
 
