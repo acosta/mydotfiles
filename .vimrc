@@ -171,4 +171,4 @@ nnoremap pc :YcmCompleter GoToDeclaration
 
 "Hightlight autocompletion window - modifying colors
 highlight Pmenu ctermbg=DarkGrey ctermfg=LightGrey
-highlight PmenuSel ctermbg=DarkBlue ctermfg=White
+highlight PmenuSel ctermbg=DarkGreen ctermfg=White
