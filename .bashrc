@@ -50,9 +50,9 @@ fi
 
 if [ $(id -u) -eq 0 ];
 then #root
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\e[1;31m\]$(__git_ps1 " [%s]")\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\e[1;31m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
 else #normal
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\n\[\e[1;31m\]$(__git_ps1 " [%s]")\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\n\[\e[1;31m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
 fi
 #unset color_prompt force_color_prompt
 
