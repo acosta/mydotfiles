@@ -123,9 +123,3 @@ export GIT_EDITOR=vim
 
 #Set main editor
 export EDITOR=vim
-
-#Perforce settings
-export P4CONFIG=/home/afonso/.p4settings
-
-#Android SDK tools and platform-tools
-export PATH=$PATH:/home/afonso/android-sdk-linux/tools:/home/afonso/android-sdk-linux/platform-tools
