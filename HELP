@@ -10,7 +10,7 @@ find .vim -name .git | xargs rm -r
 Installing NeoBundle
 ====================
 mkdir -p ~/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+git clone git@github.com:Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
 vim +NeoBundleInstall +q
 
 Installing Powerline Fonts
