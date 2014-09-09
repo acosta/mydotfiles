@@ -7,20 +7,27 @@ Remove .git files from .vim
 ===========================
 find .vim -name .git | xargs rm -r
 
-Installing NeoBundle
+Install NeoBundle
 ====================
 mkdir -p ~/.vim/bundle
 git clone git@github.com:Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
 vim +NeoBundleInstall +q
 
-Installing YouCompleteMe
+Install YouCompleteMe
 ========================
 sudo apt-get install cmake python-dev -y
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
 
-Installing Powerline Fonts
+Install Powerline Fonts
 ==========================
 git clone https://github.com/Lokaltog/powerline-fonts.git
 Copy the respective fonts to ~/.fonts
 fc-cache -vf ~/.fonts
+
+Install oh-my-zsh Shell
+=======================
+sudo apt-get install -y curl vim git zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
+sudo chsh -s $(which zsh) $(whoami)
+create a symbolic link to .zshrc file
