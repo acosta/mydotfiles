@@ -165,3 +165,6 @@ highlight PmenuSel ctermbg=DarkGreen ctermfg=White
 
 "Enable 256 colors
 set t_Co=256
+
+"Enable CUDA syntax highlight
+au BufNewFile,BufRead *.cu set ft=cu
