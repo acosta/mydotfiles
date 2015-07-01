@@ -3,15 +3,17 @@ if version < 700
     set  noloadplugins
 endif
 
-set nocompatible                   " Don't be compatible with vi
 filetype off
 
 " Vim Plugin Manager - NeoBundle
 if has('vim_starting')
+   if &compatible
+       set nocompatible                   " Don't be compatible with vi
+   endif
    set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
+endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -31,11 +33,13 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
 
-NeoBundleCheck
+call neobundle#end()
 
 filetype plugin indent on
+
+NeoBundleCheck
 
 syntax on                          " Turn on syntax highlighting
 
@@ -154,10 +158,10 @@ let g:session_autosave = 'no'
 ab rev Reviewed-by:
 
 "YouCompleteMe
-nnoremap y :YcmForceCompileAndDiagnostics
-nnoremap pg :YcmCompleter GoToDefinitionElseDeclaration
-nnoremap pd :YcmCompleter GoToDefinition
-nnoremap pc :YcmCompleter GoToDeclaration
+"nnoremap y :YcmForceCompileAndDiagnostics
+"nnoremap pg :YcmCompleter GoToDefinitionElseDeclaration
+"nnoremap pd :YcmCompleter GoToDefinition
+"nnoremap pc :YcmCompleter GoToDeclaration
 
 "Hightlight autocompletion window - modifying colors
 highlight Pmenu ctermbg=DarkGrey ctermfg=LightGrey

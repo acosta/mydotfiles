@@ -9,9 +9,15 @@ find .vim -name .git | xargs rm -r
 
 Install NeoBundle
 ====================
+Tip: copy .vim to HOME instead of create a symbolic link.
+
+1) Windows
 mkdir -p ~/.vim/bundle
 git clone git@github.com:Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
 vim +NeoBundleInstall +q
+2) Mac OS X or Linux
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+sh ./install.sh
 
 Install YouCompleteMe
 ========================
