@@ -14,7 +14,7 @@ alias grep='grep --color=auto'
 export GREP_OPTIONS="-I --exclude-dir=.svn --exclude-dir=.cache --exclude-dir=moc"
 
 #Use mvim instead of vim
-alias vim='mvim -v'
+#alias vim='mvim -v'
 
 # define colors
 C_DEFAULT="\[\033[m\]"
