@@ -33,7 +33,6 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
 
@@ -156,12 +155,6 @@ let g:session_autosave = 'no'
 
 "Abbreviations
 ab rev Reviewed-by:
-
-"YouCompleteMe
-"nnoremap y :YcmForceCompileAndDiagnostics
-"nnoremap pg :YcmCompleter GoToDefinitionElseDeclaration
-"nnoremap pd :YcmCompleter GoToDefinition
-"nnoremap pc :YcmCompleter GoToDeclaration
 
 "Hightlight autocompletion window - modifying colors
 highlight Pmenu ctermbg=DarkGrey ctermfg=LightGrey
