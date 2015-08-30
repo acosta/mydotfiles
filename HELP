@@ -33,7 +33,10 @@ fc-cache -vf ~/.fonts
 
 Install oh-my-zsh Shell
 =======================
-sudo apt-get install -y curl vim git zsh
+Linux: sudo apt-get install -y curl vim git zsh
+OS X: brew install zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash
-sudo chsh -s $(which zsh) $(whoami)
+Linux: sudo chsh -s $(which zsh) $(whoami)
+OS X: chsh -s /bin/zsh
+Clone the repo: git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 create a symbolic link to .zshrc file
