@@ -165,3 +165,6 @@ set t_Co=256
 
 "Enable CUDA syntax highlight
 au BufNewFile,BufRead *.cu set ft=cu
+
+"Enable QML syntax highlight
+au BufNewFile,BufRead *.qml set ft=qml
