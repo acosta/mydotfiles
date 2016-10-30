@@ -135,11 +135,13 @@ nmap <silent> <leader>l :set list!<CR>
 :nmap <C-c> :tabclose<CR>
 :imap <C-c> <Esc>:tabclose<CR>
 " Go to next tab: Ctrl + right
-:nmap <C-Right> :tabnext<CR>
-:imap <C-Right> <Esc>:tabnext<CR>
+:nmap . gt
+":nmap <C-Right> :tabnext<CR>
+":imap <C-Right> <Esc>:tabnext<CR>
 " Go to previous tab: Ctrl + left
-:nmap <C-Left> :tabprevious<CR>
-:imap <C-Left> <ESC>:tabprevious<CR>
+:nmap , gT
+":nmap <C-Left> :tabprevious<CR>
+":imap <C-Left> <ESC>:tabprevious<CR>
 " You might use Ctrl + (PgUp+PgDn) also, if you are using one terminal's tab only
 
 " Highlight chars that go over the 80-column limit
