@@ -115,12 +115,13 @@ set completeopt-=preview
 set shortmess+=a             " Use [+] [RO] [w] for modified, read-only, modified
 set report=0                 " Notify me whenever any lines have changed
 set confirm                  " Y-N-C prompt if closing with unsaved changes
-set statusline=[%l,%c\ %P%M]\ %f\ %r%h%w
+"set statusline=[%l,%c\ %P%M]\ %f\ %r%h%w
 set mousemodel=extend        " Enable search with Shift+click
 set list
 set listchars=tab:»·,trail:·,extends:…,nbsp:.
 set cursorline
 set splitright
+set clipboard=unnamedplus
 
 "\n to turn off search highlighting
 nmap <silent> <leader>n :silent :nohlsearch<CR>
