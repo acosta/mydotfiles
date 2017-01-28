@@ -101,12 +101,11 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.swp,*.so,*.lo,.svn,.git,CVS,*.a,*.c
 set wildmenu                 " Autocomplete features in the status bar
 set wildmode=list:longest,full
 set nobackup
-set paste
 set textwidth=100
 set nowrap
 set dir=~/tmp
 set laststatus=2             " Always show statusline, even if only 1 window
-set pastetoggle=<F11>
+set pastetoggle=<f6>
 set noswapfile
 set history=100              " 100 lines of history
 set showfulltag              " Show more information while completing tags
