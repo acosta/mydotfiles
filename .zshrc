@@ -64,7 +64,8 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='vim'
+alias vim='nvim'
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
