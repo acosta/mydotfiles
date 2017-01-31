@@ -44,7 +44,7 @@ set number
 set tabstop=2 shiftwidth=2 expandtab
 set conceallevel=0
 set splitright
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set list
 set listchars=tab:»·,trail:·,extends:…,nbsp:.
 set ignorecase
@@ -53,6 +53,9 @@ set autoindent
 set smartindent
 set smarttab
 set cursorline
+set mouse=a
+set mousemodel=extend
+
 
 "Enable 256 colors
 set t_Co=256
