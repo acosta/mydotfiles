@@ -5,6 +5,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'townk/vim-autoclose'
+Plug 'gregsexton/matchtag'
+Plug 'docunext/closetag.vim'
 
 "Color schemes
 Plug 'tomasr/molokai'
