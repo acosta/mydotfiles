@@ -121,7 +121,7 @@ set list
 set listchars=tab:»·,trail:·,extends:…,nbsp:.
 set cursorline
 set splitright
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 "\n to turn off search highlighting
 nmap <silent> <leader>n :silent :nohlsearch<CR>
