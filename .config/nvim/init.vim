@@ -4,6 +4,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'townk/vim-autoclose'
 
 "Color schemes
 Plug 'tomasr/molokai'
