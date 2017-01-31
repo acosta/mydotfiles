@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 
 "Syntax highlighting
 Plug 'pangloss/vim-javascript'
+Plug 'ap/vim-css-color'
 
 "Autocomplete
 Plug 'shougo/deoplete.nvim'
