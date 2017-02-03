@@ -9,7 +9,9 @@ Plug 'gregsexton/matchtag'
 Plug 'docunext/closetag.vim'
 
 "Color schemes
-Plug 'tomasr/molokai'
+Plug 'dracula/vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'fneu/breezy'
 
 "Git
 Plug 'tpope/vim-fugitive'
