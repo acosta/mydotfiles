@@ -128,3 +128,6 @@ let g:NERDTrimTrailingWhitespace = 1
 
 "Deoplete Options
 let g:deoplete#enable_at_startup = 1
+
+"Close Tags Options
+:let g:closetag_html_style = 1
