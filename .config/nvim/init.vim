@@ -17,8 +17,8 @@ Plug 'fneu/breezy'
 Plug 'tpope/vim-fugitive'
 
 "Syntax highlighting
-Plug 'pangloss/vim-javascript'
 Plug 'ap/vim-css-color'
+Plug 'othree/yajs.vim'
 
 "Autocomplete
 Plug 'shougo/deoplete.nvim'
@@ -39,7 +39,7 @@ set pastetoggle=<f6>
 set noshowmode
 set noswapfile
 filetype plugin indent on
-syntax on
+syntax enable
 colorscheme molokai
 set background=dark
 set number
