@@ -102,16 +102,17 @@ let g:airline#extensions#neomake#error_symbol='✖ :'
 let g:airline#extensions#neomake#warning_symbol='⚠ :'
 let g:airline_theme='luna'
 
-"Jump to the last position when reopening a file
 if has("autocmd")
+"Jump to the last position when reopening a file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
+
+"Trim whitespace onsave
+  autocmd BufWritePre * %s/\s\+$//e
+
 endif
 
 "Syntastic Options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
