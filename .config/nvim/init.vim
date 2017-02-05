@@ -8,6 +8,12 @@ Plug 'townk/vim-autoclose'
 Plug 'gregsexton/matchtag'
 Plug 'docunext/closetag.vim'
 
+"Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
 "Color schemes
 Plug 'dracula/vim'
 Plug 'flazz/vim-colorschemes'
