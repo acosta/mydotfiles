@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Editor
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'townk/vim-autoclose'
 Plug 'gregsexton/matchtag'
