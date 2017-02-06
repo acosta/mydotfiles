@@ -114,7 +114,7 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 
 "Trim whitespace onsave
-  autocmd BufWritePre * %s/\s\+$//e
+  autocmd FileType c,cpp,java,php,html,javascript,css,python,sh autocmd BufWritePre <buffer> %s/\s\+$//e
 
 endif
 
