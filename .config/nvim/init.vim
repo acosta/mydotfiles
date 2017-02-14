@@ -19,6 +19,7 @@ Plug 'honza/vim-snippets'
 Plug 'dracula/vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'fneu/breezy'
+Plug 'crusoexia/vim-monokai'
 
 "Git
 Plug 'tpope/vim-fugitive'
@@ -47,7 +48,7 @@ set noshowmode
 set noswapfile
 filetype plugin indent on
 syntax enable
-colorscheme molokai
+colorscheme monokai
 set background=dark
 set number
 set tabstop=2 shiftwidth=2 expandtab
