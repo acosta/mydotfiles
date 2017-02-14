@@ -29,7 +29,7 @@ Plug 'ap/vim-css-color'
 Plug 'othree/yajs.vim'
 
 "Autocomplete
-Plug 'shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'othree/html5.vim'
 
 "Syntax checking
