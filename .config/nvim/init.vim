@@ -7,6 +7,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'townk/vim-autoclose'
 Plug 'gregsexton/matchtag'
 Plug 'docunext/closetag.vim'
+Plug 'Chiel92/vim-autoformat'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
