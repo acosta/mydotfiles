@@ -29,6 +29,8 @@ Plug 'airblade/vim-gitgutter'
 "Syntax highlighting
 Plug 'ap/vim-css-color'
 Plug 'othree/yajs.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'jelera/vim-javascript-syntax'
 
 "Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
