@@ -8,6 +8,7 @@ Plug 'townk/vim-autoclose'
 Plug 'gregsexton/matchtag'
 Plug 'docunext/closetag.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'yggdroot/indentline'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -149,4 +150,9 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:deoplete#enable_at_startup = 1
 
 "Close Tags Options
-:let g:closetag_html_style = 1
+let g:closetag_html_style = 1
+
+"indentLine Options
+let g:indentLine_conceallevel = 2
+let g:indentLine_enabled = 0
+map <C-i> :IndentLinesToggle<CR>
