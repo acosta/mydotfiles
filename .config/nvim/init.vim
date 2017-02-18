@@ -23,6 +23,7 @@ Plug 'crusoexia/vim-monokai'
 
 "Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 "Syntax highlighting
 Plug 'ap/vim-css-color'
@@ -65,7 +66,7 @@ set smarttab
 set cursorline
 set mouse=a
 set mousemodel=extend
-
+set updatetime=250
 
 "Enable 256 colors
 set t_Co=256
