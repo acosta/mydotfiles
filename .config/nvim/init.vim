@@ -32,6 +32,7 @@ Plug 'ap/vim-css-color'
 Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 "Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
