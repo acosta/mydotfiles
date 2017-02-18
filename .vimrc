@@ -3,43 +3,49 @@ if version < 700
     set  noloadplugins
 endif
 
-filetype off
+call plug#begin('~/.vim/plugged')
+"Editor
+Plug 'sheerun/vim-polyglot'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'editorconfig/editorconfig-vim'
+Plug 'townk/vim-autoclose'
+Plug 'gregsexton/matchtag'
+Plug 'docunext/closetag.vim'
+Plug 'Chiel92/vim-autoformat'
 
-" Vim Plugin Manager - NeoBundle
-if has('vim_starting')
-   if &compatible
-       set nocompatible                   " Don't be compatible with vi
-   endif
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+"Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+"Color schemes
+Plug 'dracula/vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'fneu/breezy'
+Plug 'crusoexia/vim-monokai'
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-" Build repos.
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+"Git
+Plug 'tpope/vim-fugitive'
 
-NeoBundle 'xolox/vim-session', {
-      \ 'depends' : ['xolox/vim-misc', ]}
-NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-fugitive'
+"Syntax highlighting
+Plug 'ap/vim-css-color'
+Plug 'othree/yajs.vim'
 
-call neobundle#end()
+"Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'othree/html5.vim'
+
+"Syntax checking
+Plug 'scrooloose/syntastic'
+
+"Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
 
 filetype plugin indent on
-
-NeoBundleCheck
-
 syntax on                          " Turn on syntax highlighting
 
 " Enable syntax colors
@@ -62,18 +68,9 @@ if has("gui_running")
 endif
 
 set background=dark                " Using a dark background
+set termguicolors
+colorscheme molokai
 
-" Vim jump to the last position when reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
-
-set nocp
-set lazyredraw              " Don't repaint when scripts are running
-set scrolloff=3             " Keep 3 lines below and above the cursor
-set sidescrolloff=5
-set ruler                   " Line numbers and column the cursor is on
 set showcmd                 " Show (partial) command in status line.
 set showmatch               " Show matching brackets.
 set matchtime=2             " For .2 seconds
@@ -92,11 +89,8 @@ set backspace=2              " Backspace over anything!
 set formatoptions-=tc        " I can format for myself
 set autoindent
 set smartindent
-set sw=4                     " sw 4 spaces (used on auto ident)
-set ts=4                     " Tab stop of 4
-set softtabstop=4            " 4 spaces as a tab for bs/del
+set tabstop=2 shiftwidth=2 expandtab
 set smarttab
-"set expandtab
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.swp,*.so,*.lo,.svn,.git,CVS,*.a,*.class,*.jpg,*.png,*.gif,*.edj,*.la,moc_*,qrc_*
 set wildmenu                 " Autocomplete features in the status bar
 set wildmode=list:longest,full
@@ -115,7 +109,6 @@ set completeopt-=preview
 set shortmess+=a             " Use [+] [RO] [w] for modified, read-only, modified
 set report=0                 " Notify me whenever any lines have changed
 set confirm                  " Y-N-C prompt if closing with unsaved changes
-"set statusline=[%l,%c\ %P%M]\ %f\ %r%h%w
 set mousemodel=extend        " Enable search with Shift+click
 set list
 set listchars=tab:»·,trail:·,extends:…,nbsp:.
@@ -170,3 +163,53 @@ au BufNewFile,BufRead *.cu set ft=cu
 
 "Enable QML syntax highlight
 au BufNewFile,BufRead *.qml set ft=qml
+
+"Airline Options
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_skip_empty_sections = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#neomake#error_symbol='✖ :'
+let g:airline#extensions#neomake#warning_symbol='⚠ :'
+let g:airline_theme='luna'
+
+if has("autocmd")
+"Jump to the last position when reopening a file
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+
+"Trim whitespace onsave
+  autocmd FileType c,cpp,java,php,html,javascript,css,python,sh autocmd BufWritePre <buffer> %s/\s\+$//e
+
+endif
+
+"Syntastic Options
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_cpp_checkers = ['cppcheck']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_html_checkers = ['htmlhint']
+
+"NERDTree Options
+map <C-n> :NERDTreeToggle<CR>
+
+"Molokai color scheme
+let g:molokai_original = 1
+
+"NerdCommenter Options
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
+"Deoplete Options
+let g:deoplete#enable_at_startup = 1
+
+"Close Tags Options
+:let g:closetag_html_style = 1
