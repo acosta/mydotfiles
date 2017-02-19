@@ -1,11 +1,15 @@
 atom-beautify
+atom-monokai
 autocomplete-clang
 autocomplete-cmake
 build-cmake
 clang-format
 colorful-json
 editorconfig
+emmet
+file-icons
 git-plus
+javascript-snippets
 language-cmake
 linter
 linter-clang
@@ -13,4 +17,6 @@ linter-htmlhint
 linter-jshint
 linter-jsonlint
 linter-pep8
+linter-pycodestyle
 monokai
+terminal-plus
