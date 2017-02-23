@@ -16,6 +16,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim'
 
 "Color schemes
 Plug 'dracula/vim'
@@ -160,3 +161,7 @@ let g:closetag_html_style = 1
 let g:indentLine_conceallevel = 2
 let g:indentLine_enabled = 0
 map <C-i> :IndentLinesToggle<CR>
+
+"Emmet Options
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
