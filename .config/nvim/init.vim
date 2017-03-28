@@ -32,7 +32,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/es.next.syntax.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 "Autocomplete
@@ -135,7 +135,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_cpp_checkers = ['cppcheck']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
 
 "NERDTree Options
