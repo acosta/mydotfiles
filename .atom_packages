@@ -13,10 +13,9 @@ javascript-snippets
 language-cmake
 linter
 linter-clang
+linter-eslint
 linter-htmlhint
-linter-jshint
 linter-jsonlint
 linter-pep8
 linter-pycodestyle
 monokai
-terminal-plus
