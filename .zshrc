@@ -81,3 +81,13 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+VCS_FOLDERS="{.bzr,CVS,.git,.hg,.svn,.cache,moc,dist,node_modules}"
+GREP_OPTIONS=""
+GREP_OPTIONS+="-I --color=auto --exclude-dir=$VCS_FOLDERS"
+
+alias grep="grep $GREP_OPTIONS"
+
+unset GREP_OPTIONS
+unset VCS_FOLDERS
+
