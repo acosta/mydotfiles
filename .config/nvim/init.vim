@@ -165,3 +165,6 @@ map <C-i> :IndentLinesToggle<CR>
 "Emmet Options
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+"EditorConfig Options
+let g:EditorConfig_verbose=1
