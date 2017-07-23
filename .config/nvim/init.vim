@@ -9,7 +9,7 @@ Plug 'gregsexton/matchtag'
 Plug 'docunext/closetag.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'yggdroot/indentline'
-Plug 'a.vim'
+Plug 'vim-scripts/a.vim'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
