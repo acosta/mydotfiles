@@ -7,10 +7,6 @@ Remove .git files from .vim
 ===========================
 find .vim -name .git | xargs rm -r
 
-Install NeoBundle
-====================
-Tip: copy .vim to HOME instead of create a symbolic link.
-
 1) Windows
 mkdir -p ~/.vim/bundle
 git clone git@github.com:Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
@@ -46,3 +42,8 @@ Generate a list of Atom packages
 Packages: apm list --installed --bare | grep '^[^@]\+' -o > atom_packages.txt
 Themes: apm list --installed --themes --bare | grep '^[^@]\+' -o > atom_themes.txt
 Install: apm install --packages-file <file>
+
+Install Neovim
+==============
+https://github.com/neovim/neovim/wiki/Installing-Neovim
+Install Vim-Plug: https://github.com/junegunn/vim-plug
