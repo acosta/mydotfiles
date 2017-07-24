@@ -137,6 +137,7 @@ let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_cpp_checkers = ['cppcheck']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 "NERDTree Options
 map <C-n> :NERDTreeToggle<CR>
