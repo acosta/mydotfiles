@@ -10,6 +10,8 @@ Plug 'docunext/closetag.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'yggdroot/indentline'
 Plug 'vim-scripts/a.vim'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -169,3 +171,9 @@ autocmd FileType html,css EmmetInstall
 
 "EditorConfig Options
 let g:EditorConfig_verbose=1
+
+"Vim-Session Options
+set sessionoptions-=buffers   "Don't save hidden and unloaded buffers in sessions.
+let g:session_directory = "~/.vim/sessions"
+let g:session_autosave = "no"
+let g:session_autoload = "no"
