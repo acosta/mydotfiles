@@ -177,3 +177,6 @@ set sessionoptions-=buffers   "Don't save hidden and unloaded buffers in session
 let g:session_directory = "~/.vim/sessions"
 let g:session_autosave = "no"
 let g:session_autoload = "no"
+
+"Change the type of separator line (vertical line)
+set fillchars+=vert:│
