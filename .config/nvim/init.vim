@@ -43,6 +43,9 @@ Plug 'othree/html5.vim'
 
 "Syntax checking
 Plug 'scrooloose/syntastic'
+Plug 'prettier/vim-prettier', {
+    \ 'do': 'yarn install',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 
 "Airline
 Plug 'vim-airline/vim-airline'
@@ -180,3 +183,11 @@ let g:session_autoload = "no"
 
 "Change the type of separator line (vertical line)
 set fillchars+=vert:│
+
+"Prettier Options
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#print_width = 100
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#parser = 'flow'
+map <C-p> :PrettierAsync<CR>
+
