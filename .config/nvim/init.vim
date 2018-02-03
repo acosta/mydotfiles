@@ -61,7 +61,7 @@ set noshowmode
 set noswapfile
 filetype plugin indent on
 syntax enable
-colorscheme monokai
+colorscheme molokai_dark
 set background=dark
 set number
 set tabstop=2 shiftwidth=2 expandtab
