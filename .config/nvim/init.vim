@@ -12,6 +12,7 @@ Plug 'yggdroot/indentline'
 Plug 'vim-scripts/a.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+Plug 'ctrlpvim/ctrlp.vim'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -189,5 +190,7 @@ let g:prettier#exec_cmd_async = 1
 let g:prettier#config#print_width = 100
 let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#parser = 'flow'
-map <C-p> :PrettierAsync<CR>
+map <C-f> :PrettierAsync<CR>
 
+"ctrlp Options
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
