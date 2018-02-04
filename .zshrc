@@ -84,7 +84,7 @@ export EDITOR='nvim'
 
 VCS_FOLDERS="{.bzr,CVS,.git,.hg,.svn,.cache,moc,dist,node_modules}"
 GREP_OPTIONS=""
-GREP_OPTIONS+="-I --color=auto --exclude-dir=$VCS_FOLDERS"
+GREP_OPTIONS+="-I --color=auto --exclude-dir=$VCS_FOLDERS --exclude='*.lock'"
 
 alias grep="grep $GREP_OPTIONS"
 
