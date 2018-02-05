@@ -13,7 +13,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dkprice/vim-easygrep'
+Plug 'mileszs/ack.vim'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -196,7 +196,6 @@ map <C-f> :PrettierAsync<CR>
 "ctrlp Options
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-"Easygrep Options
-let g:EasyGrepFilesToExclude='node_modules,*.lock,*.log,*.swp,.svn,.git'
-let g:EasyGrepRecursive=1
-let g:EasyGrepCommand=1   " important, otherwise, it won't work
+"Ack Options
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space><Paste>
