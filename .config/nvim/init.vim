@@ -38,6 +38,8 @@ Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/es.next.syntax.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 "Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
