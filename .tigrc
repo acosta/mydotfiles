@@ -1,0 +1,27 @@
+#tig configuration file
+#reference: https://jonas.github.io/tig/doc/tigrc.5.html
+
+#Call git commit in status view
+bind status C ?!git commit -v
+
+#Use Up and Down to navigate in diff view
+bind diff <Up> move-up
+bind diff <Down> move-down
+
+#Amend the last commit
+bind status + ?!git commit --amend
+
+#Remove file
+bind status d ?!git rm %(file)
+
+#UI Colors (color area fgcolor bgcolor [attributes])
+#General
+color date cyan default blink
+
+#Main View
+color graph-commit yellow default
+
+#Diff
+color diff-chunk cyan default blink
+color diff-header cyan default
+color diff-index cyan default bold
