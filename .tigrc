@@ -8,6 +8,10 @@ bind status C ?!git commit -v
 bind diff <Up> move-up
 bind diff <Down> move-down
 
+#Use Up and Down to navigate in stage view
+bind stage <Up> move-up
+bind stage <Down> move-down
+
 #Amend the last commit
 bind status + ?!git commit --amend
 
