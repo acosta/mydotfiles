@@ -65,6 +65,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/
 # fi
 
 alias vim='nvim'
+alias zs='source ~/.zshrc'
 export EDITOR='nvim'
 
 # Compilation flags
