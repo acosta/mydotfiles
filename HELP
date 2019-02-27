@@ -37,6 +37,11 @@ OS X: chsh -s /bin/zsh
 Clone the repo: git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 create a symbolic link to .zshrc file
 
+Install Powerlevel9k
+====================
+OS X: brew tap sambadevi/powerlevel9k
+      brew install powerlevel9k
+
 Generate a list of Atom packages
 ================================
 Packages: apm list --installed --bare | grep '^[^@]\+' -o > atom_packages.txt
