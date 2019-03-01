@@ -41,6 +41,16 @@ Install Powerlevel9k
 ====================
 OS X: brew tap sambadevi/powerlevel9k
       brew install powerlevel9k
+      git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+Install Oh-my-zsh Plugins
+=========================
+Syntax highlighting
+  brew install zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+Autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 Generate a list of Atom packages
 ================================
