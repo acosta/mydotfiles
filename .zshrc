@@ -55,7 +55,11 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bold'
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/afonso/bin"
+if [[ "$OSTYPE" == darwin* ]]; then
+  export PATH="/Users/acosta/Library/Android/sdk/platform-tools:/Library/TeX/texbin:/Users/acosta/Qt/5.11.1/clang_64/bin:/usr/local/go/bin:$PATH"
+elif [[ "$OSTYPE" == linux-gnu ]]; then
+  export PATH="/home/afonso/bin:$PATH"
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
