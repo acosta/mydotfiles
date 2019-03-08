@@ -70,6 +70,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/
 
 alias vim='nvim'
 alias zs='source ~/.zshrc'
+alias python='python3'
 export EDITOR='nvim'
 
 # Compilation flags
