@@ -55,10 +55,13 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bold'
 
 # User configuration
 
+OS_ICON=""
 if [[ "$OSTYPE" == darwin* ]]; then
   export PATH="/Users/acosta/Library/Android/sdk/platform-tools:/Library/TeX/texbin:/Users/acosta/Qt/5.11.1/clang_64/bin:/usr/local/go/bin:$PATH"
+  OS_ICON="\ue711"
 elif [[ "$OSTYPE" == linux-gnu ]]; then
   export PATH="/home/afonso/bin:$PATH"
+  OS_ICON="\ue712"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -108,6 +111,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_RAM_ELEMENTS=(ram_free)
+POWERLEVEL9K_OS_ICON="$OS_ICON"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
