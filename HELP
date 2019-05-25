@@ -63,3 +63,4 @@ Install Neovim
 https://github.com/neovim/neovim/wiki/Installing-Neovim
 Install Vim-Plug: https://github.com/junegunn/vim-plug
 Install ESLint and HTMLLint: npm i eslint -g; npm i htmllint -g
+Install flake8 for python: pip3 install flake8
