@@ -64,3 +64,10 @@ https://github.com/neovim/neovim/wiki/Installing-Neovim
 Install Vim-Plug: https://github.com/junegunn/vim-plug
 Install ESLint and HTMLLint: npm i eslint -g; npm i htmllint -g
 Install flake8 for python: pip3 install flake8
+
+Used by vim-autoformat
+Install autopep8 (format code) for python: pip3 install autopep8
+Install JS-Beautify (format code) for JS and JSON: npm install -g js-beautify
+
+Sort imports alphabetically and automatically separated into sections
+pip3 install isort

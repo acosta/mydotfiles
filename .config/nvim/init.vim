@@ -202,3 +202,6 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 "Ack Options
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space><Paste>
+
+" isort Options
+autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
