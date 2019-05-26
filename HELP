@@ -71,3 +71,6 @@ Install JS-Beautify (format code) for JS and JSON: npm install -g js-beautify
 
 Sort imports alphabetically and automatically separated into sections
 pip3 install isort
+
+Autocomplete for Python
+pip3 install jedi

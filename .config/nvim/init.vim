@@ -43,6 +43,7 @@ Plug 'mxw/vim-jsx'
 
 "Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 Plug 'othree/html5.vim'
 
 "Syntax checking
@@ -164,6 +165,7 @@ let g:NERDTrimTrailingWhitespace = 1
 
 "Deoplete Options
 let g:deoplete#enable_at_startup = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif   "automatically close the method preview window
 
 "Close Tags Options
 let g:closetag_html_style = 1
