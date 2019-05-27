@@ -61,6 +61,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   OS_ICON="\ue711"
   export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
   export ANDROID_HOME="$HOME/Library/Android/sdk"
+  export PATH="/usr/local/opt/node@10/bin:$PATH"
 elif [[ "$OSTYPE" == linux-gnu ]]; then
   export PATH="/home/afonso/bin:$PATH"
   OS_ICON="\ue712"
