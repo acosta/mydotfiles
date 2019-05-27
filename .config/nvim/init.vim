@@ -43,7 +43,7 @@ Plug 'mxw/vim-jsx'
 
 "Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'othree/html5.vim'
 
 "Syntax checking
@@ -149,6 +149,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_post_args='--max-line-length=100'
 
 "NERDTree Options
 map <C-n> :NERDTreeToggle<CR>
@@ -166,6 +167,7 @@ let g:NERDTrimTrailingWhitespace = 1
 "Deoplete Options
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif   "automatically close the method preview window
+let g:deoplete#sources#jedi#show_docstring = 1
 
 "Close Tags Options
 let g:closetag_html_style = 1
