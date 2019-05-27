@@ -133,3 +133,6 @@ POWERLEVEL9K_VIRTUALENV_FOREGROUND='white'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator ram dir_writable ssh context dir virtualenv vcs)
 POWERLEVEL9K_DISABLE_RPROMPT=true
+
+# fix weird chars in the terminal when 'git diff' is used
+export LESS="-erX"
