@@ -59,6 +59,8 @@ OS_ICON=""
 if [[ "$OSTYPE" == darwin* ]]; then
   export PATH="/Users/acosta/Library/Android/sdk/platform-tools:/Library/TeX/texbin:/Users/acosta/Qt/5.11.1/clang_64/bin:/usr/local/go/bin:$PATH"
   OS_ICON="\ue711"
+  export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
 elif [[ "$OSTYPE" == linux-gnu ]]; then
   export PATH="/home/afonso/bin:$PATH"
   OS_ICON="\ue712"
