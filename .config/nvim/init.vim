@@ -85,6 +85,12 @@ set mousemodel=extend
 set updatetime=250
 set splitbelow
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
+
 "Enable 256 colors
 set t_Co=256
 
