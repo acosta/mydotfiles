@@ -83,6 +83,7 @@ set cursorline
 set mouse=a
 set mousemodel=extend
 set updatetime=250
+set splitbelow
 
 "Enable 256 colors
 set t_Co=256
