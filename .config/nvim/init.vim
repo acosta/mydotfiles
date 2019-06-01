@@ -216,3 +216,12 @@ nnoremap <Leader>a :Ack!<Space><Paste>
 
 " isort Options
 autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
+
+" Moving lines using Ctrl+j (down) or Ctrl+k (up)
+" The mappings work in normal, insert and visual modes
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
