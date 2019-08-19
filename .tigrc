@@ -20,12 +20,12 @@ bind status d ?!git rm %(file)
 
 #UI Colors (color area fgcolor bgcolor [attributes])
 #General
-color date cyan default blink
+color date cyan default bold
 
 #Main View
-color graph-commit yellow default
+color graph-commit yellow default bold
 
 #Diff
-color diff-chunk cyan default blink
+color diff-chunk cyan default bold
 color diff-header cyan default
 color diff-index cyan default bold
