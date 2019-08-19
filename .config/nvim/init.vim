@@ -156,7 +156,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_post_args='--max-line-length=100'
+let g:syntastic_python_flake8_post_args='--max-line-length=120'
 
 "NERDTree Options
 map <C-n> :NERDTreeToggle<CR>
