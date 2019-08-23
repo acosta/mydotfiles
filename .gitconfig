@@ -8,7 +8,7 @@
 [color "status"]
 	untracked = yellow
 [color "diff"]
-	frag = magenta bold
+	frag = cyan bold
 	old = red bold
 	new = green bold
 [core]
