@@ -12,6 +12,7 @@ Plug 'yggdroot/indentline'
 Plug 'vim-scripts/a.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 
