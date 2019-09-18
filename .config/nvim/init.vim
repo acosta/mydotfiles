@@ -22,6 +22,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 
 "Color schemes
 Plug 'dracula/vim'
