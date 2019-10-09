@@ -154,6 +154,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_cpp_checkers = ['cppcheck']
+let g:syntastic_cpp_cppcheck_args = "--enable=all --std=c++11 --language=c++"
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
