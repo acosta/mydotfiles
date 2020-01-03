@@ -67,7 +67,7 @@ set noshowmode
 set noswapfile
 filetype plugin indent on
 syntax enable
-colorscheme dracula
+colorscheme molokai
 set background=dark
 set number
 set tabstop=2 shiftwidth=2 expandtab
