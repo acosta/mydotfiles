@@ -235,3 +235,4 @@ let g:clang_format#code_style = 'WebKit'
 let g:clang_format#auto_format_on_insert_leave = 1
 let g:clang_format#enable_fallback_style = 0
 let g:clang_format#auto_format = 1
+let g:clang_format#code_style = 'webkit'
