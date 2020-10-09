@@ -136,3 +136,8 @@ POWERLEVEL9K_DISABLE_RPROMPT=true
 
 # fix weird chars in the terminal when 'git diff' is used
 export LESS="-erX"
+
+export VIRTUAL_ENV_DISABLE_PROMPT=
+
+# direnv
+eval "$(direnv hook zsh)"
