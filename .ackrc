@@ -1,1 +1,5 @@
 --ignore-file=ext:lock
+--ignore-dir=build
+--ignore-dir=site-packages
+--ignore-dir=node_modules
+--color
