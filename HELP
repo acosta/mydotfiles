@@ -83,3 +83,14 @@ Install Tmux Plugin Manager
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 Install plugins
 prefix + I
+
+Setup Brew packages
+===================
+Install the Homebrew tap
+$ brew tap Homebrew/bundle
+
+Create the Brewfile with all Homebrew package installed in the system
+$ brew bundle dump
+
+Restore the configuration (run it in the folder that contains the Brewfile)
+$ brew bundle
