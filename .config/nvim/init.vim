@@ -29,6 +29,7 @@ Plug 'dracula/vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'fneu/breezy'
 Plug 'crusoexia/vim-monokai'
+Plug 'ayu-theme/ayu-vim'
 
 "Git
 Plug 'tpope/vim-fugitive'
@@ -67,7 +68,9 @@ set noshowmode
 set noswapfile
 filetype plugin indent on
 syntax enable
-colorscheme molokai
+"colorscheme molokai
+let ayucolor="mirage"
+colorscheme ayu
 set background=dark
 set number
 set tabstop=2 shiftwidth=2 expandtab
