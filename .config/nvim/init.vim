@@ -15,6 +15,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
+Plug 'TaDaa/vimade'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
