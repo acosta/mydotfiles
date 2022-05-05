@@ -57,13 +57,15 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bold'
 
 OS_ICON=""
 if [[ "$OSTYPE" == darwin* ]]; then
-  export PATH="/Users/acosta/Library/Android/sdk/platform-tools:/Library/TeX/texbin:/Users/acosta/Qt/5.11.1/clang_64/bin:/usr/local/go/bin:$PATH"
+  export PATH="/Users/$USER/Library/Android/sdk/platform-tools:/Library/TeX/texbin:/Users/$USER/Qt/5.11.1/clang_64/bin:/usr/local/go/bin:$PATH"
   OS_ICON="\ue711"
   export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
   export ANDROID_HOME="$HOME/Library/Android/sdk"
-  export PATH="/usr/local/opt/node@10/bin:$PATH"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 elif [[ "$OSTYPE" == linux-gnu ]]; then
-  export PATH="/home/afonso/bin:$PATH"
+  export PATH="/home/$USER/bin:$PATH"
   OS_ICON="\ue712"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
