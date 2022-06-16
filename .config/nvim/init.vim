@@ -16,6 +16,8 @@ Plug 'xolox/vim-easytags'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'TaDaa/vimade'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -240,3 +242,9 @@ let g:clang_format#auto_format_on_insert_leave = 1
 let g:clang_format#enable_fallback_style = 0
 let g:clang_format#auto_format = 1
 let g:clang_format#code_style = 'webkit'
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
