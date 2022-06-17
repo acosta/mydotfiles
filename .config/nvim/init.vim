@@ -133,11 +133,15 @@ nmap <silent> <leader>l :set list!<CR>
 "You might use Ctrl + (PgUp+PgDn) also, if you are using one terminal's tab only
 
 "Airline Options
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.colnr = "\u33c7"
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#neomake#error_symbol='✖ :'
 let g:airline#extensions#neomake#warning_symbol='⚠ :'
 let g:airline_theme='luna'
