@@ -18,6 +18,7 @@ Plug 'mileszs/ack.vim'
 Plug 'TaDaa/vimade'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'ryanoasis/vim-devicons'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
