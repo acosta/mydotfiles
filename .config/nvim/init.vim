@@ -13,8 +13,6 @@ Plug 'vim-scripts/a.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
 Plug 'TaDaa/vimade'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -220,13 +218,6 @@ let g:prettier#config#print_width = 100
 let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#parser = 'flow'
 map <C-f> :PrettierAsync<CR>
-
-"ctrlp Options
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-"Ack Options
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space><Paste>
 
 " isort Options
 autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
