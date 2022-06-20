@@ -17,6 +17,7 @@ Plug 'TaDaa/vimade'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 "Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -246,3 +247,5 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 let g:snipMate = { 'snippet_version' : 1 }
+
+lua require('treesitter')
