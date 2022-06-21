@@ -132,6 +132,11 @@ nmap <silent> <leader>l :set list!<CR>
 ":imap <C-Left> <ESC>:tabprevious<CR>
 "You might use Ctrl + (PgUp+PgDn) also, if you are using one terminal's tab only
 
+"Buffers
+:map <[b> :bprevious<CR>
+:map <]b> :bnext<CR>
+:map <C-w> :bdelete<CR>
+
 "Airline Options
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
