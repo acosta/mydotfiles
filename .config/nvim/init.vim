@@ -240,12 +240,7 @@ let g:clang_format#enable_fallback_style = 0
 let g:clang_format#auto_format = 1
 let g:clang_format#code_style = 'webkit'
 
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
 let g:snipMate = { 'snippet_version' : 1 }
 
-lua require('treesitter')
+lua require('acosta.telescope')
+lua require('acosta.treesitter')
