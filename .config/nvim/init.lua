@@ -1,2 +1,3 @@
 require('base')
+require('mappings')
 
