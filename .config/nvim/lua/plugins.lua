@@ -24,6 +24,7 @@ require('packer').startup(function(use)
     end
   }
   use 'kyazdani42/nvim-web-devicons'         -- File icons
+  use 'nvim-treesitter/nvim-treesitter'      -- Highlight, edit, and navigate code
 
   -- Color schemes
   use {
