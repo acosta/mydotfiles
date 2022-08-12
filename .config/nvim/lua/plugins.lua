@@ -27,6 +27,7 @@ require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'      -- Highlight, edit, and navigate code
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }     -- Fuzzy Finder (files, lsp, etc)
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
   -- Color schemes
   use {
