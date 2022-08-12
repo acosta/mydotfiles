@@ -8,8 +8,12 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'nvim-lua/plenary.nvim' -- Common utilities
+  use 'wbthomason/packer.nvim'               -- Package manager
+  use 'nvim-lua/plenary.nvim'                -- Common utilities
+
+  -- Git
+  use 'tpope/vim-fugitive'                   -- Git commands in nvim
+  use 'lewis6991/gitsigns.nvim'              -- Add git related info in the signs columns and popups
 
   if is_bootstrap then
     require('packer').sync()
