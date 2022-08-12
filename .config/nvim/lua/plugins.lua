@@ -23,6 +23,7 @@ require('packer').startup(function(use)
         require('Comment').setup()
     end
   }
+  use 'kyazdani42/nvim-web-devicons'         -- File icons
 
   -- Color schemes
   use {
