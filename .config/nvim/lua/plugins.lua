@@ -18,6 +18,39 @@ require('packer').startup(function(use)
   -- Editor
   use 'nvim-lualine/lualine.nvim'            -- Fancier statusline
 
+  -- Color schemes
+  use {
+    disable = true,
+    'Shatur/neovim-ayu',
+    config = function()
+      vim.cmd('colorscheme ayu-mirage')
+    end
+  }
+
+  use {
+    disable = true,
+    'dracula/vim',
+    config = function()
+      vim.cmd('colorscheme dracula')
+    end
+  }
+
+  use {
+    disable = true,
+    'tomasr/molokai',
+    config = function()
+      vim.cmd('colorscheme molokai')
+    end
+  }
+
+  use {
+    disable = false,
+    'morhetz/gruvbox',
+    config = function()
+      vim.cmd('colorscheme gruvbox')
+    end
+  }
+
   if is_bootstrap then
     require('packer').sync()
   end
