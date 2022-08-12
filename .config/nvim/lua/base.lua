@@ -10,6 +10,8 @@ set.fileencoding = 'utf-8'
 set.termguicolors = true
 set.background = 'dark'
 set.cursorline = true
+set.updatetime = 250
+set.mouse = 'a'
 
 set.number = true
 set.autoindent = true

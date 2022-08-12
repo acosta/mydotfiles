@@ -15,6 +15,9 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'                   -- Git commands in nvim
   use 'lewis6991/gitsigns.nvim'              -- Add git related info in the signs columns and popups
 
+  -- Editor
+  use 'nvim-lualine/lualine.nvim'            -- Fancier statusline
+
   if is_bootstrap then
     require('packer').sync()
   end
