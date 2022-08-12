@@ -35,7 +35,7 @@ require('packer').startup(function(use)
   }
 
   use {
-    disable = true,
+    disable = false,
     'dracula/vim',
     config = function()
       vim.cmd('colorscheme dracula')
@@ -51,7 +51,7 @@ require('packer').startup(function(use)
   }
 
   use {
-    disable = false,
+    disable = true,
     'morhetz/gruvbox',
     config = function()
       vim.cmd('colorscheme gruvbox')
