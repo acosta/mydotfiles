@@ -17,6 +17,12 @@ require('packer').startup(function(use)
 
   -- Editor
   use 'nvim-lualine/lualine.nvim'            -- Fancier statusline
+  use {
+    'numToStr/Comment.nvim',                 -- "gc" to comment visual regions/lines
+    config = function()
+        require('Comment').setup()
+    end
+  }
 
   -- Color schemes
   use {
