@@ -28,6 +28,7 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }     -- Fuzzy Finder (files, lsp, etc)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+  use 'windwp/nvim-autopairs'
 
   -- Code completion
   use 'hrsh7th/cmp-buffer'                   -- nvim-cmp source for buffer words
