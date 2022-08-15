@@ -29,6 +29,13 @@ require('packer').startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
+  -- Code completion
+  use 'hrsh7th/cmp-buffer'                   -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp'                 -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp'                     -- Completion
+  use 'neovim/nvim-lspconfig'                -- LSP
+  use 'onsails/lspkind-nvim'                 -- vscode-like pictograms
+
   -- Color schemes
   use {
     disable = true,
