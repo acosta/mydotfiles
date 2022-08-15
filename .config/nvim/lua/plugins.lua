@@ -8,34 +8,37 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'               -- Package manager
-  use 'nvim-lua/plenary.nvim'                -- Common utilities
+  use 'wbthomason/packer.nvim' -- Package manager
+  use 'nvim-lua/plenary.nvim' -- Common utilities
 
   -- Git
-  use 'tpope/vim-fugitive'                   -- Git commands in nvim
-  use 'lewis6991/gitsigns.nvim'              -- Add git related info in the signs columns and popups
+  use 'tpope/vim-fugitive' -- Git commands in nvim
+  use 'lewis6991/gitsigns.nvim' -- Add git related info in the signs columns and popups
 
   -- Editor
-  use 'nvim-lualine/lualine.nvim'            -- Fancier statusline
+  use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use {
-    'numToStr/Comment.nvim',                 -- "gc" to comment visual regions/lines
+    'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
     config = function()
-        require('Comment').setup()
+      require('Comment').setup()
     end
   }
-  use 'kyazdani42/nvim-web-devicons'         -- File icons
-  use 'nvim-treesitter/nvim-treesitter'      -- Highlight, edit, and navigate code
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }     -- Fuzzy Finder (files, lsp, etc)
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'nvim-treesitter/nvim-treesitter' -- Highlight, edit, and navigate code
+  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Fuzzy Finder (files, lsp, etc)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
   use 'windwp/nvim-autopairs'
 
   -- Code completion
-  use 'hrsh7th/cmp-buffer'                   -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp'                 -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp'                     -- Completion
-  use 'neovim/nvim-lspconfig'                -- LSP
-  use 'onsails/lspkind-nvim'                 -- vscode-like pictograms
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'neovim/nvim-lspconfig' -- LSP
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'williamboman/mason.nvim' -- Easily install and manage LSP servers, DAP servers, linters, and formatters
+  use 'williamboman/mason-lspconfig.nvim'
+  use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
 
   -- Color schemes
   use {
