@@ -29,6 +29,12 @@ require('packer').startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
   use 'windwp/nvim-autopairs'
+  use {
+    "TaDaa/vimade",  -- fades inactive buffers
+    config = function()
+      vim.cmd [[nnoremap yot :VimadeToggle<CR>]]
+    end,
+  }
 
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
