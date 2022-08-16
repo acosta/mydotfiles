@@ -35,6 +35,13 @@ require('packer').startup(function(use)
       vim.cmd [[nnoremap yot :VimadeToggle<CR>]]
     end,
   }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons' -- optional, for file icons
+    }
+  }
+
 
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
