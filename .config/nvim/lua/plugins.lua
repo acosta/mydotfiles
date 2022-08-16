@@ -42,6 +42,7 @@ require('packer').startup(function(use)
     }
   }
   use 'norcalli/nvim-colorizer.lua'
+  use 'farmergreg/vim-lastplace'
 
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
