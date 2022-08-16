@@ -41,7 +41,7 @@ require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons' -- optional, for file icons
     }
   }
-
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
