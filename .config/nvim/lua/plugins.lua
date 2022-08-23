@@ -46,6 +46,8 @@ require('packer').startup(function(use)
 
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-path'  -- nvim-cmp source for path
+  use 'hrsh7th/cmp-vsnip' -- snippet completion source for nvim-cmp
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP
