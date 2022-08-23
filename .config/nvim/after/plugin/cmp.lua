@@ -1,7 +1,7 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
-local lspkind = require 'lspkind'
-local luasnip = require 'luasnip'
+local lspkind = require('lspkind')
+local luasnip = require('luasnip')
 
 cmp.setup({
   snippet = {
@@ -26,7 +26,16 @@ cmp.setup({
     { name = 'buffer' }
   }),
   formatting = {
-    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+    format = lspkind.cmp_format({
+      mode = 'symbol_text', -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
+      maxwidth = 50,
+      menu = {
+        buffer = '[Buffer]',
+        nvim_lsp = '[LSP]',
+        path = '[Path]',
+        luasnip = '[Snippet]',
+      },
+    })
   }
 })
 
