@@ -56,6 +56,7 @@ require('packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
   use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'rafamadriz/friendly-snippets'
 
   -- Markdown preview
   use({
