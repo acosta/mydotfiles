@@ -2,9 +2,6 @@ local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
 
--- Delete a word backwards
-keymap.set('n', 'dw', 'vb"_d')
-
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
