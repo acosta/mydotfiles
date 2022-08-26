@@ -86,6 +86,7 @@ export EDITOR='nvim'
 
 alias gtags='git describe --tags $(git rev-list --tags --max-count=5)'
 alias cat='bat'
+alias ls='exa'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
