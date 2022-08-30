@@ -68,6 +68,10 @@ elif [[ "$OSTYPE" == linux-gnu ]]; then
   export PATH="/home/$USER/bin:$PATH"
   OS_ICON="\ue712"
 fi
+
+# enable shell history for iex (elixir shell)
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
