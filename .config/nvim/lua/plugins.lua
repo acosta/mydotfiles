@@ -43,6 +43,10 @@ require('packer').startup(function(use)
   }
   use 'norcalli/nvim-colorizer.lua'
   use 'farmergreg/vim-lastplace'
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
 
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
