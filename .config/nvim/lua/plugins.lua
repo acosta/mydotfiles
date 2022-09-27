@@ -24,7 +24,10 @@ require('packer').startup(function(use)
     end
   }
   use 'kyazdani42/nvim-web-devicons' -- File icons
-  use 'nvim-treesitter/nvim-treesitter' -- Highlight, edit, and navigate code
+  use {
+    'nvim-treesitter/nvim-treesitter', -- Highlight, edit, and navigate code
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Fuzzy Finder (files, lsp, etc)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
