@@ -48,6 +48,9 @@ require('packer').startup(function(use)
     requires = "kyazdani42/nvim-web-devicons",
   }
 
+  -- Terminal
+  use 'numToStr/FTerm.nvim'
+
   -- Code completion
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-path'  -- nvim-cmp source for path
