@@ -1,4 +1,7 @@
-require('gitsigns').setup {
+local status, gs = pcall(require, "gitsigns")
+if (not status) then return end
+
+gs.setup {
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
     change       = {hl = 'GitSignsChange', text = '-', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
