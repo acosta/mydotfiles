@@ -3,10 +3,6 @@ if (not status) then return end
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
-local function telescope_buffer_dir()
-  return vim.fn.expand('%:p:h')
-end
-
 local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
@@ -20,7 +16,7 @@ telescope.setup {
   },
   extensions = {
     file_browser = {
-      theme = "dropdown",
+      theme = "ivy",
       -- disables netrw and use telescope-file-browser in its place
       hiack_netrw = true,
       mappings = {
@@ -83,15 +79,4 @@ vim.keymap.set('n', ';e', function()
 end)
 
 -- Telescope file browser
-vim.keymap.set("n", "sf", function()
-  telescope.extensions.file_browser.file_browser({
-    path = "%:p:h",
-    cwd = telescope_buffer_dir(),
-    respect_gitignore = false,
-    hidden = true,
-    grouped = true,
-    previewer = false,
-    initial_mode = "normal",
-    layout_config = { height = 40 }
-  })
-end)
+vim.keymap.set("n", "fb", ":Telescope file_browser <CR>", { noremap = true })
