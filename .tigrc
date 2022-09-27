@@ -29,3 +29,6 @@ color graph-commit yellow default bold
 color diff-chunk cyan default bold
 color diff-header cyan default
 color diff-index cyan default bold
+
+#Line graphics
+set line-graphics = utf-8
