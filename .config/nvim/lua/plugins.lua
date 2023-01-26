@@ -65,7 +65,13 @@ require('packer').startup(function(use)
   use 'williamboman/mason.nvim' -- Easily install and manage LSP servers, DAP servers, linters, and formatters
   use 'williamboman/mason-lspconfig.nvim'
   use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        require('lspsaga').setup({})
+    end,
+  })
   use 'rafamadriz/friendly-snippets'
 
   -- Markdown preview
