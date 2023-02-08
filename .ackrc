@@ -2,4 +2,7 @@
 --ignore-dir=build
 --ignore-dir=site-packages
 --ignore-dir=node_modules
+--ignore-dir=deps
+--ignore-dir=.next
+--ignore-dir=.mypy_cache
 --color
