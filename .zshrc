@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -5,8 +12,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="intheloop"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="intheloop"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -134,6 +141,7 @@ POWERLEVEL9K_VCS_GIT_ICON="\uf1d3"
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON="\uf113"
 POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON="\ue703"
 POWERLEVEL9K_VCS_GIT_GITLAB_ICON="\uf296"
+POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_DELIMITER=".."
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
@@ -142,7 +150,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
 POWERLEVEL9K_VIRTUALENV_BACKGROUND=107
 POWERLEVEL9K_VIRTUALENV_FOREGROUND='white'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator ram dir_writable ssh context dir virtualenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir_writable ssh dir virtualenv vcs)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
 # fix weird chars in the terminal when 'git diff' is used
@@ -152,3 +160,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
