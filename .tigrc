@@ -32,3 +32,6 @@ color diff-index cyan default bold
 
 #Line graphics
 set line-graphics = utf-8
+
+#Split view
+set split-view-width = 80%
