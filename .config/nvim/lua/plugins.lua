@@ -62,7 +62,9 @@ require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'williamboman/mason.nvim' -- Easily install and manage LSP servers, DAP servers, linters, and formatters
+  use { 'williamboman/mason.nvim', -- Easily install and manage LSP servers, DAP servers, linters, and formatters
+        run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+      }
   use 'williamboman/mason-lspconfig.nvim'
   use { 'L3MON4D3/LuaSnip', requires = { 'saadparwaiz1/cmp_luasnip' } } -- Snippet Engine and Snippet Expansion
   use({
@@ -73,6 +75,7 @@ require('packer').startup(function(use)
     end,
   })
   use 'rafamadriz/friendly-snippets'
+  use 'simrat39/rust-tools.nvim'
 
   -- Markdown preview
   use({
