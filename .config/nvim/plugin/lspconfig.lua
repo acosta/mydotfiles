@@ -39,7 +39,7 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Enable the following language servers
-local servers = { 'clangd', 'elixirls', 'pyright', 'lua_ls', 'rust_analyzer' }
+local servers = { 'clangd', 'elixirls', 'lua_ls', 'pyright', 'rust_analyzer', 'tsserver'}
 
 require('mason').setup()
 
