@@ -122,3 +122,4 @@ local opts = {
 }
 
 require("rust-tools").setup(opts)
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
