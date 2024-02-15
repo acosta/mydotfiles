@@ -75,3 +75,26 @@ api.nvim_create_autocmd("TextYankPost", {
   end,
   group = lua_highlight,
 })
+
+-- Setup toggle between relative and nonrelative line numbers
+local numbertogglegroup = api.nvim_create_augroup("numbertoggle", {})
+api.nvim_create_autocmd(
+{ "BufEnter", "FocusGained", "InsertLeave" },
+{
+  pattern = '*',
+  callback = function()
+      vim.wo.relativenumber = true
+    end,
+    group = numbertogglegroup
+  }
+)
+api.nvim_create_autocmd(
+  { "BufLeave", "FocusLost", "InsertEnter" },
+  {
+    pattern = '*',
+    callback = function()
+        vim.wo.relativenumber = false
+    end,
+    group = numbertogglegroup
+  }
+)
