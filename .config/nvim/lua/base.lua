@@ -4,14 +4,14 @@ local set = vim.opt
 
 local indent = 2
 
-set.encoding = 'utf-8'
-set.fileencoding = 'utf-8'
+set.encoding = "utf-8"
+set.fileencoding = "utf-8"
 
 set.termguicolors = true
-set.background = 'dark'
+set.background = "dark"
 set.cursorline = true
 set.updatetime = 250
-set.mouse = 'a'
+set.mouse = "a"
 
 set.number = true
 set.autoindent = true
@@ -23,9 +23,9 @@ set.showcmd = true
 set.cmdheight = 1
 set.laststatus = 2
 set.scrolloff = 10
-set.shell = 'bash'
-set.backupskip = { '/tmp/*', '/private/tmp/*' }
-set.inccommand = 'split'
+set.shell = "bash"
+set.backupskip = { "/tmp/*", "/private/tmp/*" }
+set.inccommand = "split"
 set.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 set.smartcase = true
 set.smarttab = true
@@ -39,12 +39,12 @@ set.expandtab = true
 set.fileformat = "unix"
 set.modeline = false
 set.wrap = false -- No Wrap lines
-set.backspace = { 'start', 'eol', 'indent' }
-set.path:append { '**' } -- Finding files - Search down into subfolders
-set.wildignore = { '*/node_modules/*', '*/venv/*', '*/.venv/*', '.git' }
+set.backspace = { "start", "eol", "indent" }
+set.path:append({ "**" }) -- Finding files - Search down into subfolders
+set.wildignore = { "*/node_modules/*", "*/venv/*", "*/.venv/*", ".git" }
 set.list = true
-set.listchars = { tab='»·', trail='·', extends='…' }
-set.clipboard:append { 'unnamedplus' }
+set.listchars = { tab = "»·", trail = "·", extends = "…" }
+set.clipboard:append({ "unnamedplus" })
 
 -- Undercurl
 cmd([[let &t_Cs = "\e[4:3m"]])
@@ -52,12 +52,12 @@ cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leaving insert
 api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste"
+  pattern = "*",
+  command = "set nopaste",
 })
 
 -- Add asterisks in block comments
-set.formatoptions:append { 'r' }
+set.formatoptions:append({ "r" })
 
 -- Highlight whitespaces
 cmd([[highlight WhitespaceEOL ctermbg=red ctermfg=white guibg=red guifg=white]])
