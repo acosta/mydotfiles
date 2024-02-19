@@ -1,6 +1,8 @@
 # Neovim Configuration
 
-This folder contains Neovim configurations written in `Lua`. All configurations were tested using Neovim 0.7+ on macOS.
+This folder contains Neovim configurations based on [LazyVim](https://github.com/LazyVim/LazyVim). All configurations were tested using Neovim 0.9+ on macOS.
+
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ## Fonts
 
