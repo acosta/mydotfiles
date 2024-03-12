@@ -13,8 +13,10 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ "$OSTYPE" == darwin* ]]; then
+	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -79,6 +81,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  alias cat='bat'
+  alias ls='exa'
+  alias ps='procs'
 
 elif [[ "$OSTYPE" == linux-gnu ]]; then
   export PATH="/home/$USER/bin:$PATH"
@@ -108,9 +113,6 @@ alias gtags='git describe --tags $(git rev-list --tags --max-count=5)'
 alias gup='git fetch && git rebase origin/main'
 alias gsm='git switch main'
 alias gsc='git switch -c'
-alias cat='bat'
-alias ls='exa'
-alias ps='procs'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
