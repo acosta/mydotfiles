@@ -68,7 +68,7 @@ plugins=(git colored-man-pages command-not-found sudo virtualenv)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-ZSH_HIGHLIGHT_STYLES[cursor]='bold'
+#ZSH_HIGHLIGHT_STYLES[cursor]='bold'
 
 # User configuration
 
