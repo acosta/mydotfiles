@@ -61,11 +61,15 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+#fzf configuration
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export DISABLE_FZF_AUTO_COMPLETION="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages command-not-found sudo virtualenv)
+plugins=(git colored-man-pages command-not-found sudo virtualenv fzf)
 
 source $ZSH/oh-my-zsh.sh
 
