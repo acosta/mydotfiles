@@ -135,6 +135,8 @@ alias gtags='git describe --tags $(git rev-list --tags --max-count=5)'
 alias gup='git fetch && git rebase origin/main'
 alias gsm='git switch main'
 alias gsc='git switch -c'
+alias cat='bat'
+alias ps='procs'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
