@@ -5,4 +5,5 @@
 --ignore-dir=deps
 --ignore-dir=.next
 --ignore-dir=.mypy_cache
+--ignore-dir=.repo
 --color
