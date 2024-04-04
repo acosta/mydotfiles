@@ -108,7 +108,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   alias ps='procs'
 
 elif [[ "$OSTYPE" == linux-gnu ]]; then
-  export PATH="/home/$USER/bin:$PATH"
+  export PATH="${HOME}/.bin:/opt/nvim-linux64/bin:${PATH}"
   OS_ICON="\ue712"
 fi
 
