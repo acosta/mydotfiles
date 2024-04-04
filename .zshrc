@@ -14,11 +14,13 @@ fi
 export ZSH=$HOME/.oh-my-zsh
 
 if [[ "$OSTYPE" == darwin* ]]; then
-	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ZSH_SHARE=/opt/homebrew/share
 else
-  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ZSH_SHARE=/usr/share
 fi
+
+source ${ZSH_SHARE}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${ZSH_SHARE}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -104,7 +106,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
   alias cat='bat'
-  alias ls='exa'
   alias ps='procs'
 
 elif [[ "$OSTYPE" == linux-gnu ]]; then
