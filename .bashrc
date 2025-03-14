@@ -91,6 +91,17 @@ alias gst='git status'
 alias gd='git diff'
 alias gup='git pull --rebase'
 alias gds='git diff --staged'
+alias gsh='git show'
+alias glog="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias gba='git branch -a'
+alias gb='git branch'
+alias gsm='git checkout main'
+alias lg='lazygit'
 alias vim='nvim'
 
 # Alias definitions.
