@@ -12,7 +12,7 @@ return {
   -- add sonokai
   { "sainnhe/sonokai",
     config = function ()
-      vim.go.sonokai_style = "andromeda"
+      vim.g.sonokai_style = "andromeda"
     end,
   },
 
