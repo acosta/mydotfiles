@@ -134,6 +134,9 @@ alias gtags='git describe --tags $(git rev-list --tags --max-count=5)'
 alias gup='git fetch && git rebase origin/main'
 alias gsm='git switch main'
 alias gsc='git switch -c'
+alias glog="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+alias gundo='git reset --soft HEAD~1'
+alias lg='lazygit'
 
 if [[ "$ENABLE_CORRECTION" == "true" ]]; then
   alias ssh='nocorrect ssh'
