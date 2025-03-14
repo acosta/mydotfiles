@@ -107,7 +107,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 elif [[ "$OSTYPE" == linux-gnu ]]; then
-  export PATH="${HOME}/.bin:/opt/nvim-linux64/bin:${PATH}"
+  export PATH="${HOME}/.bin:${HOME}/.bin/nvim-linux-x86_64/bin:${PATH}"
   OS_ICON="\ue712"
 fi
 
