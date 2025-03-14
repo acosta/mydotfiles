@@ -105,8 +105,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-  alias cat='bat'
-  alias ps='procs'
 
 elif [[ "$OSTYPE" == linux-gnu ]]; then
   export PATH="${HOME}/.bin:/opt/nvim-linux64/bin:${PATH}"
@@ -136,8 +134,12 @@ alias gtags='git describe --tags $(git rev-list --tags --max-count=5)'
 alias gup='git fetch && git rebase origin/main'
 alias gsm='git switch main'
 alias gsc='git switch -c'
-alias cat='bat'
-alias ps='procs'
+
+if [[ "$ENABLE_CORRECTION" == "true" ]]; then
+  alias ssh='nocorrect ssh'
+
+  setopt correct_all
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
