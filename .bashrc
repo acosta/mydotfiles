@@ -48,15 +48,14 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
-}
+source /etc/bash_completion.d/git-prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 if [ $(id -u) -eq 0 ];
-then #root
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\e[1;31m\]$(parse_git_branch "[%s]")\[\033[00m\]\$ '
-else #normal
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\n\[\e[1;31m\]$(parse_git_branch "[%s]")\[\033[00m\]\$ '
+  then #root
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\e[1;31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '
+  else #normal
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;37m\]@\[\033[01;33m\]\h\[\033[00m\]:\[\033[01;34m\]\w\n\[\e[1;31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '
 fi
 #unset color_prompt force_color_prompt
 
@@ -106,8 +105,12 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  fi
 fi
 
 # Qt 4.7 installed from Git
