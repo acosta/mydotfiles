@@ -150,3 +150,9 @@ export GIT_EDITOR=nvim
 
 #Set main editor
 export EDITOR=nvim
+
+# google repo
+PATH="${HOME}/.bin:${HOME}/bin:${PATH}"
+
+# Set up fzf key bindings and fuzzy completion
+source /usr/share/doc/fzf/examples/key-bindings.bash
